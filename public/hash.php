@@ -1,4 +1,6 @@
-<?php header('Access-Control-Allow-Origin: *'); ?>
+
+<?php header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
+header('Access-Control-Allow-Origin: *'); ?>
 <ul class="list-group">
 <?php
 if (isset($_GET['string'])){
