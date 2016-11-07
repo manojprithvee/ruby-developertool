@@ -1,0 +1,67 @@
+
+body {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body, table, tbody, tr, td {
+	height: 100%
+}
+table {
+	table-layout: fixed;
+	width: 100%;
+}
+td {
+	width: 33%;
+	padding: 3px 4px;
+    margin: 10px; 
+	border: 10px solid #060606;
+	vertical-align: top;
+    color: #282828;
+	font: 1em monospace;
+	text-align: left;
+	white-space: pre-wrap;
+}
+#settings h1 {
+	display: inline;
+	font-size: 100%;
+}
+del {
+	text-decoration: none;
+	color: #b30000;
+	background: #fadad7;
+}
+ins {
+	background: #eaf2c2;
+	color: #406619;
+	text-decoration: none;
+}
+
+
+#settings label {
+	margin-left: 1em;
+}
+
+.source {
+	position: absolute;
+	right: 1%;
+	top: .2em;
+}
+
+[contentEditable] {
+	background: #F9F9F9;
+	border-radius: 4px;
+	-webkit-user-modify: read-write-plaintext-only;
+	outline: none;
+}
+[contentEditable]:focus {
+	background: #FFF;
+	border-color: #6699cc;
+	box-shadow: 0 0 4px #2175c9;
+}
+
+@-moz-document url-prefix() {
+	body {
+		height: 99%; /* Hide scroll bar in Firefox */
+	}
+}

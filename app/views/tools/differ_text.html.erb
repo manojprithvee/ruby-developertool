@@ -1,0 +1,91 @@
+<h3 class="text-center">Differ Text</h3>
+          <div id="settings">
+	<h1>Diff</h1>
+	<label><input type="radio" name="diff_type" value="diffChars" checked=""> Chars</label>
+	<label><input type="radio" name="diff_type" value="diffWords"> Words</label>
+	<label><input type="radio" name="diff_type" value="diffLines"> Lines</label>
+</div>
+<table>
+	<tr>
+		<td contenteditable="true" id="a">restaurant</td>
+		<td contenteditable="true" id="b">aura</td>
+		<td><pre id="result"></pre></td>
+	</tr>
+</table>
+<script defer="">
+
+var a = document.getElementById('a');
+var b = document.getElementById('b');
+var result = document.getElementById('result');
+
+function changed() {
+	var diff = JsDiff[window.diffType](a.textContent, b.textContent);
+	var fragment = document.createDocumentFragment();
+	for (var i=0; i < diff.length; i++) {
+
+		if (diff[i].added && diff[i + 1] && diff[i + 1].removed) {
+			var swap = diff[i];
+			diff[i] = diff[i + 1];
+			diff[i + 1] = swap;
+		}
+
+		var node;
+		if (diff[i].removed) {
+			node = document.createElement('del');
+			node.appendChild(document.createTextNode(diff[i].value));
+		} else if (diff[i].added) {
+			node = document.createElement('ins');
+			node.appendChild(document.createTextNode(diff[i].value));
+		} else {
+			node = document.createTextNode(diff[i].value);
+		}
+		fragment.appendChild(node);
+	}
+
+	result.textContent = '';
+	result.appendChild(fragment);
+}
+
+window.onload = function() {
+	onDiffTypeChange(document.querySelector('#settings [name="diff_type"]:checked'));
+	changed();
+};
+
+a.onpaste = a.onchange =
+b.onpaste = b.onchange = changed;
+
+if ('oninput' in a) {
+	a.oninput = b.oninput = changed;
+} else {
+	a.onkeyup = b.onkeyup = changed;
+}
+
+function onDiffTypeChange(radio) {
+	window.diffType = radio.value;
+}
+
+var radio = document.getElementsByName('diff_type');
+for (var i = 0; i < radio.length; i++) {
+	radio[i].onchange = function(e) {
+		onDiffTypeChange(e.target);
+		changed();
+	}
+}
+</script>
+<div class="col-md-offset-1 col-md-10 hidden-xs hidden-sm"> 
+			<br>
+  <div class="jumbotron"><h3>About Differ text</h3>
+           <p>Differ Text is user to differentiate between 2 string normally on all the website there will be one of the following way to differenciate between string but here at Developertool.biz we have all the 3 type namly charactor,word and line of differ tools.you can choose between the three by selecting one of the following from the radio button on top.<emp>String Differencator</emp> is we use full if we are working with old code and we forgot what we changes.Text Difference Finder is also useful when we need to find the difference between a older version of a code and a newer version of the code.
+</p></div>
+  
+          </div>
+          </div>
+<% provide :rejs do %>
+<% javascript_include_tag "diff"%>
+<%end%>
+<% provide :recss do %>
+<% stylesheet_link_tag "diff"%>
+<%end%>
+<% provide :title do %>
+Differ Text
+<%end%>

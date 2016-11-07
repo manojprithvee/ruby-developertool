@@ -1,0 +1,26 @@
+.ads {
+			margin-top: 20px;
+			background: grey;
+		}
+		
+		.ads3060 {
+			width: 300px;
+			height: 600px;
+			margin: auto;
+		}
+		
+		.ads7290 {
+			width: 728px;
+			height: 90px;
+		}
+		#google_translate_element{
+		    padding: 13px;
+		
+		}
+		  .jumbotron p {
+      font-size:14px
+    }
+	.center{
+      width:100%;
+      text-align: center;
+    }

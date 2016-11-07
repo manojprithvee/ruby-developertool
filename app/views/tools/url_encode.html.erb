@@ -1,0 +1,29 @@
+<h1 class="center">Url Encode / Url Decode</h1>
+          
+  <div class="form-group col-md-12">
+            <input type="text" class="form-control" id="url" placeholder="Enter URL"/>
+  </div>
+  <div class="col-md-4 col-md-offset-5">
+  <div class="form-group col-md-12">
+            <buttom class="btn btn-primary" id="encode" >encode</buttom>
+            <buttom class="btn btn-primary" id="decode" >decode</buttom>
+  </div>
+          </div>
+    <div class="col-md-offset-1 col-md-10"> 
+  <div class="jumbotron"><h3>About Url Encode / Url Decode</h3>
+           <p>URL encoding is the practice of translating unprintable characters or characters with special meaning within URLs to a representation that is unambiguous and universally accepted by web browsers and servers. These characters include:</p>
+           <ul class="list">
+<li><p><b>ASCII control characters</b> - Unprintable characters typically used for output control. Character ranges 00-1F hex (0-31 decimal) and 7F (127 decimal). A complete encoding table is given below.</p></li>
+<li><p><b>Non-ASCII control characters</b> - These are characters beyond the ASCII character set of 128 characters. This range is part of the ISO-Latin character set and includes the entire "top half" of the ISO-Latin set 80-FF hex (128-255 decimal). A complete encoding table is given below.</p></li>
+<li><p><b>Reserved characters</b> - These are special characters such as the dollar sign, ampersand, plus, common, forward slash, colon, semi-colon, equals sign, question mark, and "at" symbol. All of these can have different meanings inside a URL so need to be encoded. A complete encoding table is given below.</p></li>
+<li><p><b>Unsafe characters</b> - These are space, quotation marks, less than symbol, greater than symbol, pound character, percent character,  Left Curly Brace, Right Curly Brace , Pipe, Backslash, Caret, Tilde,  Left Square Bracket , Right Square Bracket, Grave Accent. These character  present the possibility of being misunderstood within URLs for various reasons. These characters should also always be encoded. A complete encoding table is given below.</p></li>
+</ul>
+<p> The encoding notation replaces the desired character with three characters: a percent sign and two hexadecimal digits that correspond to the position of the character in the ASCII character set.</p>
+           <p class="pull-right">Source - <a href="https://www.tutorialspoint.com/html/html_url_encoding.htm">Tutorials Point</a></p>
+           </div>
+  
+          </div>
+<% provide :rejs do%>
+<%javascript_include_tag "urlencode"%>
+<%end%>
+<% provide :title do %>Url Encode / Url Decode<%end%>

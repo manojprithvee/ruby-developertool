@@ -1,0 +1,26 @@
+ .center{
+      width:100%;
+      text-align: center;
+      
+    }
+    a {
+    text-decoration: none !important;
+    color: #888888;
+}
+a:hover 
+  {
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+   }
+   a:hover[disabled]
+  {
+    pointer-events: none;
+    cursor: not-allowed;
+    color: #888888;
+    text-decoration:none;
+    
+   }
+   .ads7290 {
+			margin: auto;
+		}

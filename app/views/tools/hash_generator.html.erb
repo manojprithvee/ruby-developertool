@@ -1,0 +1,24 @@
+<h1 class="center">Hash Generator</h1>
+          <div class="col-md-offset-1 col-md-10"><div class="form-group">
+          <label for="text">String : </label>
+          <input class="form-control" id="text" type="text">
+           </div>
+           <div id = "output"></div>
+           <div class="jumbotron"><h3>About Hash Generator</h3
+           <p>This is a online tool which when given a string will output the following hash for the same md2 | md4 | md5 | sha1 | sha224 | sha256 | sha384 | sha512 | ripemd128 | ripemd160 | ripemd256 | ripemd320 | whirlpool | tiger128,3 | tiger160,3 | tiger192,3 | tiger128,4 | tiger160,4 | tiger192,4 | snefru | snefru256 | gost | gost-crypto | adler32 | crc32 | crc32b | fnv132 | fnv1a32 | fnv164 | fnv1a64 | joaat | haval128,3 | haval160,3 | haval192,3 | haval224,3 | haval256,3 | haval128,4 | haval160,4 | haval192,4 | haval224,4 | haval256,4 | haval128,5 | haval160,5 | haval192,5 | haval224,5 | haval256,5.This is a tool which is very useful for developers when they want to add a user to the database cause they need the hash of a password to do it.It is also a multiple hash tool we just need to copy the hash that is generated and paste it in the string text box again.  </p></div>
+           <div class="jumbotron"><h3>Cryptographic hash function</h3
+           <p>A cryptographic hash function is a special class of hash function that has certain properties which make it suitable for use in cryptography. It is a mathematical algorithm that maps data of arbitrary size to a bit string of a fixed size (a hash function) which is designed to also be a one-way function, that is, a function which is infeasible to invert. The only way to recreate the input data from an ideal cryptographic hash function's output is to attempt a brute-force search of possible inputs to see if they produce a match. Bruce Schneier has called one-way hash functions "the workhorses of modern cryptography".The input data is often called the message, and the output (the hash value or hash) is often called the message digest or simply the digest.</p><p class="pull-right">Source - <a href="https://en.wikipedia.org/wiki/Cryptographic_hash_function">Wikipedia</a></p>
+</div>
+</div>
+
+<% provide :rejs do %>
+<% javascript_include_tag "hash"%>
+<%end%>
+<% provide :title do %>
+Hash Generator
+<%end%>
+<% provide :recss do %>
+<% stylesheet_link_tag "hash"%>
+<%end%>
+
+       

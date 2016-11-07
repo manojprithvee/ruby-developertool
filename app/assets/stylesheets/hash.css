@@ -1,0 +1,8 @@
+.badge::-moz-selection { /* Code for Firefox */
+    color: red;
+    background: yellow;
+}
+.badge::selection {
+    color: red; 
+    background: yellow;
+}
