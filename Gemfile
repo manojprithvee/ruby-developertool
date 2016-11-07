@@ -27,13 +27,16 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 gem 'figaro'
-gem 'pg'
+
 group :development do
   gem 'capistrano'
   gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
   gem 'capistrano-bundler', require: false
   gem 'capistrano-rvm'
+end
+group :production do
+gem 'pg'
 end
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
