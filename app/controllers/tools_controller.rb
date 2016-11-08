@@ -27,4 +27,6 @@ class ToolsController < ApplicationController
   end
   def index
   end
+  def privacypolicy
+  end
 end

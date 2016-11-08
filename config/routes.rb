@@ -10,6 +10,7 @@ Developertool::Application.routes.draw do
   get "contact.html" => "tools#contact"
   get "/" => "tools#index"
   get "index.html" => "tools#index"
+  get "privacypolicy.html" => "tools#privacypolicy"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
