@@ -11,4 +11,4 @@
 // about supported directives.
 //
 //= require jquery
-
+//= require bootstrap.min
