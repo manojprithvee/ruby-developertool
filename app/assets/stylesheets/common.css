@@ -24,3 +24,9 @@
       width:100%;
       text-align: center;
     }
+    .menuicon {
+    width: 19px;
+    height: 2px;
+    background-color: white;
+    margin: 3px 0;
+}
