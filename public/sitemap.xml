@@ -8,38 +8,54 @@
 
 <url>
   <loc>https://www.developertool.biz/</loc>
+  <priority>1.00</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/index.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/about.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/contact.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/privacypolicy.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/count.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/diff.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/password_gen.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/hash.html</loc>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://www.developertool.biz/base64encode.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/urlencode.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/find.html</loc>
+  <priority>0.80</priority>
 </url>
 <url>
   <loc>https://www.developertool.biz/pretty.html</loc>
+  <priority>0.80</priority>
 </url>
 </urlset>
