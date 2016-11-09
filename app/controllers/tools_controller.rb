@@ -29,4 +29,6 @@ class ToolsController < ApplicationController
   end
   def privacypolicy
   end
+  def base64encode
+  end
 end

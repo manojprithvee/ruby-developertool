@@ -1,0 +1,30 @@
+<h1 class="center">Base64 Encode / Base64 Decode</h1>
+          
+  <div class="form-group col-md-12">
+            <input type="text" class="form-control" id="base64" placeholder="Enter String"/>
+  </div>
+  <div class="col-md-4 col-md-offset-5">
+  <div class="form-group col-md-12">
+            <buttom class="btn btn-primary" id="encode" >encode</buttom>
+            <buttom class="btn btn-primary" id="decode" >decode</buttom>
+  </div>
+          </div>
+    <div class="col-md-offset-1 col-md-10"> 
+    <div class="jumbotron">
+    <h3>Base64 Explained</h3>
+    Base64 is a mechanism to enable representing and transferring binary data over mediums that allow only printable characters.It is most popular form of the “Base Encoding”, the others known in use being Base16 and Base32.<br><br>
+
+The need for Base64 arose from the need to attach binary content to emails like images, videos or arbitrary binary content .  Since SMTP [RFC 5321] only allowed 7-bit US-ASCII characters within the messages,  there was a need to represent these binary octet streams using the seven bit ASCII characters.<br><br>
+
+Here is what RFC 5321 [Simple Mail Transfer protocol] states.<br><br>
+
+“Commands and replies are composed of characters from the ASCII character set [6]. When the transport service provides an 8-bit byte (octet) transmission channel, each 7-bit character is transmitted, right justified, in an octet with the high-order bit cleared to zero. More specifically, the unextended SMTP service provides 7-bit transport only. An originating SMTP client that has not successfully negotiated an appropriate extension with a particular server (see the next paragraph) MUST NOT transmit messages with information in the high-order bit of octets. If such messages are transmitted in violation of this rule, receiving SMTP servers MAY clear the high- order bit or reject the message as invalid.”<br><br>
+
+This led to the evolution and popularity of the Internet Standards like MIME [stands for Multipurpose Internet Mail Extensions]. MIME provided mechanisms to allow things like writing text using characters from a repertoire that require a different character encoding, and more importantly, allow one or more binary attachments to the e-mail.<br><br><p class="pull-right">Source - <a href="https://blogs.oracle.com/rammenon/entry/base64_explained">Oracle Blog</a></p>
+           
+    </div>
+    </div>
+<% provide :rejs do%>
+<%javascript_include_tag "base64encode"%>
+<%end%>
+<% provide :title do %>Url Encode / Url Decode<%end%>
