@@ -1,6 +1,11 @@
 <h1 class="center">Whats My Ip?</h1>
           <div class="col-md-offset-1 col-md-10"><div class="form-group">
-           <div id = "output" class="alert alert-warning center" style="font-size:30px"><%=request.remote_ip%></div>
+           <div id = "output" class="alert alert-warning center" ><p style="font-size:30px"><%=request.remote_ip%></p>
+           <% isp=getipdetails(request.remote_ip.to_s)%>
+           <% if !isp.nil? and isp!="" and isp!=" "%>
+           <p><%=isp%></p>
+           <%end%>
+           </div>
            <div class="jumbotron">
            <h3>The Importance of Knowing an IP Address</h3>
            <p>Every device that connects to the Internet has its own Internet Protocol (IP) address. IP addresses make it possible, among other things, for computers from different networks to find each other. IP addresses are vital for all Internet-based activities, and yet it's not uncommon that a user doesn't know his computer's IP address or what it's good for.</p><br>

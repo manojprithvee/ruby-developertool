@@ -1,4 +1,5 @@
 class ToolsController < ApplicationController
+ include ToolsHelper
   def word_count
   end
 
