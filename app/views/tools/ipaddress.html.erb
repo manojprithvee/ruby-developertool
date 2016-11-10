@@ -1,7 +1,25 @@
 <h1 class="center">Whats My Ip?</h1>
           <div class="col-md-offset-1 col-md-10"><div class="form-group">
            <div id = "output" class="alert alert-warning center"><%=request.remote_ip%></div>
-           
+           <div class="jumbotron">
+           <h3>The Importance of Knowing an IP Address</h3>
+           <p>Every device that connects to the Internet has its own Internet Protocol (IP) address. IP addresses make it possible, among other things, for computers from different networks to find each other. IP addresses are vital for all Internet-based activities, and yet it's not uncommon that a user doesn't know his computer's IP address or what it's good for.</p><br>
+           <h3>Public vs. Private IP Addresses</h3>
+<p>There are two types of IP addresses: private and public. Private IP addresses are part of a reusable pool set aside by the Internet Engineering Task Force for individual networks. These include, particularly, addresses beginning with “10.”, “172.16.”, and “192.168.” These IP address are only relevant to your corporate or local area network. To communicate across the Internet, computers need a public IP address. This address is globally unique, so it cannot be the same as any other in the world. Looking up your IP configuration information in Window settings will often return your private address, which cannot be reached through the Internet. You’ll need to use a service to determine your public IP address as assigned by your Internet service provider (ISP).</p><br>
+
+<h3>IP Addresses and DNS</h3>
+<p>Most IP addresses are hidden by a service called Domain Name Service, or DNS. DNS translates an easy-to-remember URL, such as www.MyAddress.com, into an IP address. This service requires massive DNS servers, which stores a table of which names go to which IP address. Making a request to Myaddress.com first requires a DNS resolution request be made to a DNS server, which then returns the IP address your computer ultimately uses to communicate with the MyAddress.com Web server.</p>
+<br>
+<h3>Faster Connections</h3>
+<p>File sharing between Windows PC relies on a technology called NetBIOS. This system is similar to DNS, and uses a computer's "name" and a series of discovery packets to create a connection. By typing "\\[computer name]" (without quotes) into an Internet Explorer Window, you begin this NetBIOS discovery process. But this process can be slow and, under certain configurations, not work properly. Knowing the direct IP address, and typing it as "\\[IP Address]" completes the process faster by circumventing the NetBIOS or DNS lookup process. This trick applies to any settings, such as e-mail server configuration, which uses a host name.</p>
+<br>
+<h3>Enable Remote Administration and Control</h3>
+<p>The Internet enables great remote services; your home desktop computer, for example, can be controlled remotely using software such as Windows Remote Desktop or DameWare Remote Control. IP-based security cameras, likewise, often have the option to be viewed using any Internet connection. Even if you use a host name service, such as DynDNS, setting up and using these devices over the Internet requires that you know their public and private IP addresses.</p>
+<br>
+<h3>Facilitate Network Troubleshooting</h3>
+<p>When troubleshooting a failing network connection, you typically use Ping and Traceroute commands. The typical format for these commands is "ping [detination IP]" or "tracert [destination IP]" (without quotes). Ping sends a single packet looking for a response, and records whether that response was received. Traceroute sends a packet to a destination and asks all routers on the path to return some basic information. For example, if you ping www.yahoo.com and www.google.com, receive no response, then the problem could be with your Internet connection or the DNS server. If you ping 98.138.253.109 and 173.194.77.106, then you eliminate the possibility of a DNS failure. If you suspect a problem with you DNS server, then sending a ping request to that server’s IP will help you to confirm.</p>
+<p class="pull-right">Source - <a href="http://smallbusiness.chron.com/importance-knowing-ip-address-69077.html">http://smallbusiness.chron.com/</a></p>
+           </div>
 </div>
 
 <% provide :title do %>
