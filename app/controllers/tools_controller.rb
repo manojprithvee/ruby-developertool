@@ -31,4 +31,6 @@ class ToolsController < ApplicationController
   end
   def base64encode
   end
+  def ipaddress
+  end
 end
