@@ -1,4 +1,5 @@
-<?php
+<?php 
+header('Access-Control-Allow-Origin: *');
 function get_client_ip() {
     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
