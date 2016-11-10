@@ -13,9 +13,10 @@
   <meta name="msvalidate.01" content="BBF48AAF3326A7917EEFF2A54A319355" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta property="og:type" name="og:type" content="og:website">
-	<meta name="description" content="Provider useful tools for Developers">
+	<meta name="description" content="<%= yield :desc %>">
+  <meta name="og:description" content="<%= yield :desc %>">
 	<meta property="og:url" content="https://developertool.biz">
-	<meta property="og:image" content="/ogimage.png">
+	<meta property="og:image" content="https://developertool.biz/ogimage.png">
   <meta name="author" content="developertool.biz">
   <%= stylesheet_link_tag "application" %>
   <%= yield :recss %>
