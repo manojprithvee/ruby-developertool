@@ -1,7 +1,8 @@
 <h1 class="center">Whats My Ip?</h1>
           <div class="col-md-offset-1 col-md-10"><div class="form-group">
-           <div id = "output" class="alert alert-warning center" ><p style="font-size:30px"><%=request.env['HTTP_CF_CONNECTING_IP']%></p>
-           <% isp=getipdetails(request.env['HTTP_CF_CONNECTING_IP'].to_s)%>
+           <%if !request.env['HTTP_CF_CONNECTING_IP'].nil?%><%ip=request.env['HTTP_CF_CONNECTING_IP']%><%else%><% ip=request.remote_ip%><%end%>
+           <div id = "output" class="alert alert-warning center" ><p style="font-size:30px"><%=ip%></p>
+           <% isp=getipdetails(ip.to_s)%>
            <% if !isp.nil? and isp!="" and isp!=" "%>
            <p><%=isp%></p>
            <%end%>
