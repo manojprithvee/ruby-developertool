@@ -9,7 +9,6 @@ Developertool::Application.routes.draw do
   get "about.html" => "tools#about"
   get "contact.html" => "tools#contact"
   get "/" => "tools#index"
-  get "index.html" => "tools#index"
   get "privacypolicy.html" => "tools#privacypolicy"
   get "base64encode.html" => "tools#base64encode"
   get "ipaddress.html" => "tools#ipaddress"
