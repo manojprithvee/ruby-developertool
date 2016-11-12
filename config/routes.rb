@@ -12,6 +12,7 @@ Developertool::Application.routes.draw do
   get "privacypolicy.html" => "tools#privacypolicy"
   get "base64encode.html" => "tools#base64encode"
   get "ipaddress.html" => "tools#ipaddress"
+  get "xpath.html" => "tools#xpath"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -34,4 +34,6 @@ class ToolsController < ApplicationController
   end
   def ipaddress
   end
+  def xpath
+  end
 end

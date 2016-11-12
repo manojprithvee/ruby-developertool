@@ -1,0 +1,26 @@
+<h1 class="center">Xpath Extractor</h1>
+          
+  <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="url" placeholder="Enter Url/s with ',' seperate if multiple url. "/>
+  </div>
+   <div class="form-group col-md-6">
+            <input type="text" class="form-control" id="xpath" placeholder="Enter Xpath/s with '|' seperate if multiple xpath."/>
+  </div>
+  <div class="col-md-4 col-md-offset-5">
+  <div class="form-group col-md-12">
+            <buttom class="btn btn-primary" id="Submit" >Submit</buttom>
+           
+  </div>
+          </div>
+    <div class="col-md-offset-1 col-md-10"> 
+    <div class="jumbotron" id="output"> 
+    </div>
+    </div>
+    <% provide :rejs do%>
+<%javascript_include_tag "xpath"%>
+<%end%>
+<% provide :title do %>Xpath Extractor<%end%>
+
+<% provide :desc do %>
+Xpath Extractor is a online tool for extracting xpath multiple url and multiple xpaths at a same time .
+<%end%>
