@@ -22,7 +22,7 @@
   <%= yield :recss %>
 </head>
 <body class="container-fluid">
-	<nav class="navbar navbar-default">
+	<span itemscope itemtype="http://schema.org/Article"><nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
             <div class="navbar-toggle collapsed"  data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -31,7 +31,9 @@
               <div class="menuicon"></div>
               <div class="menuicon"></div>
 </div>
-            <a class="navbar-brand" href="/">DeveloperTools</a>
+            <a class="navbar-brand" href="/">
+            <span itemprop="author" itemscope itemtype="http://schema.org/Person">
+            <span itemprop="name">DeveloperTools</span></span></a>
           </div>
           <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">

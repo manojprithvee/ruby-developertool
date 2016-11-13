@@ -1,4 +1,4 @@
-<h1 class="center">Whats My Ip?</h1>
+<h1 itemprop="name" class="center">Whats My Ip?</h1></span>
           <div class="col-md-offset-1 col-md-10"><div class="form-group">
            <%if !request.env['HTTP_CF_CONNECTING_IP'].nil?%><%ip=request.env['HTTP_CF_CONNECTING_IP']%><%else%><% ip=request.remote_ip%><%end%>
            <div id = "output" class="alert alert-warning center" ><p style="font-size:30px"><%=ip%></p>
