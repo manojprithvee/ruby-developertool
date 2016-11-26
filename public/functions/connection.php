@@ -13,7 +13,7 @@
 
 // You should have received a copy of the GNU Affero General Public License
 // along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
+echo "manoj";
 function submitCertToCT($chain, $ct_url) {
   global $timeout;
   $ct_chain = array('chain' => []);
