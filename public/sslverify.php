@@ -10,7 +10,7 @@ foreach (glob("functions/*.php") as $filename) {
 
 if ( isset($_GET['host']) && !empty($_GET['host'])) {
   $data = [];
-  $hostname = mb_strtolower(get($_GET['host']));
+  $hostname = mb_strtolower(($_GET['host']));
   $hostname = parse_hostname($hostname);
   if ($hostname['multiple_ip']) {
     $data["error"] = ["Host format is incorrect. (use \$host:\$ip.)"];
@@ -38,7 +38,7 @@ if ( isset($_GET['host']) && !empty($_GET['host'])) {
 
 $data['version'] = $version;
 $data = utf8encodeNestedArray($data);
-
+echo $data;
 if(isset($data["data"]["error"])) {
   $data["error"] = $data["data"]["error"];
   unset($data["data"]);
