@@ -12,7 +12,7 @@ if ( isset($_GET['host']) && !empty($_GET['host'])) {
   $data = [];
   $hostname = mb_strtolower(($_GET['host']));
   $hostname = parse_hostname($hostname);
-  if ($hostname['multiple_ip']) {
+  if (array_key_exists('multiple_ip',$hostname)) {
     $data["error"] = ["Host format is incorrect. (use \$host:\$ip.)"];
   } 
   $host = $hostname['hostname'];
@@ -21,6 +21,7 @@ if ( isset($_GET['host']) && !empty($_GET['host'])) {
   if ( !is_numeric($port) ) {
     $port = 443;
   }
+  if (array_key_exists('fastcheck',$_GET))
   $fastcheck = $_GET['fastcheck'];
   $write_cache = 1;
   $hostfilename = preg_replace("([^\w\s\d\-_~,;:\[\]\(\).])", '', $host);
