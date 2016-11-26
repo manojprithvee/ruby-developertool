@@ -23,6 +23,7 @@ if ( isset($_GET['host']) && !empty($_GET['host'])) {
   }
   if (array_key_exists('fastcheck',$_GET))
   $fastcheck = $_GET['fastcheck'];
+  echo "manoj";
   $write_cache = 1;
   $hostfilename = preg_replace("([^\w\s\d\-_~,;:\[\]\(\).])", '', $host);
   $hostfilename = preg_replace("([\.]{2,})", '', $host);
