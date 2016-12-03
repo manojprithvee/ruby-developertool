@@ -1,0 +1,23 @@
+<h1 itemprop="name" class="center">Online SSL Verifer/Online SSL Vulnerability Checker</h1></span>
+          
+  <div class="form-group col-md-10 col-md-offset-1">
+            <input type="text" class="form-control" id="url" placeholder="example:google.com"/>
+  </div>
+  <div class="col-md-4 col-md-offset-5">
+  <div class="form-group col-md-12">
+            <buttom class="btn btn-primary" id="Submit" >Submit</buttom>     
+  </div>
+          </div>
+    <div class="col-md-offset-1 col-md-10"> 
+    <div class="jumbotron" >
+    <pre style="color: inherit;background-color: #151515;border: inherit;" id="output"></pre> 
+    </div>
+    </div>
+    <% provide :rejs do%>
+<%javascript_include_tag "sslverify"%>
+<%end%>
+<% provide :title do %>SSL Verify<%end%>
+
+<% provide :desc do %>
+Online SSL Verifer/Online SSL Vulnerability Checker is a online tool for verifing and validating ssl certificates.Online SSL Vulnerability Checker also scan for Vulnerability in SSL Certificates.
+<%end%>

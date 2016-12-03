@@ -1,4 +1,5 @@
 Developertool::Application.routes.draw do
+  get "api/sslverify" => 'api#sslverify'
   get "count.html" => 'tools#word_count'
   get "diff.html" => 'tools#differ_text'
   get "password_gen.html" => 'tools#password_gen'
@@ -13,6 +14,7 @@ Developertool::Application.routes.draw do
   get "base64encode.html" => "tools#base64encode"
   get "ipaddress.html" => "tools#ipaddress"
   get "xpath.html" => "tools#xpath"
+  get "sslverify.html" => "tools#sslverify"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

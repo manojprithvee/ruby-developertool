@@ -36,4 +36,6 @@ class ToolsController < ApplicationController
   end
   def xpath
   end
+  def sslverify
+  end
 end
