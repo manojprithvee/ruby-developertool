@@ -19,7 +19,9 @@
 	<meta property="og:url" content="https://developertool.biz">
 	<meta property="og:image" content="https://developertool.biz/ogimage.png">
   <meta name="author" content="developertool.biz">
+  <% if @xmas %>
   <%= stylesheet_link_tag "balls" %>
+  <%end%>
   <%= stylesheet_link_tag "application" %>
    <%= yield :recss %>
 </head>
@@ -46,7 +48,7 @@
               </div><!--/.nav-collapse -->
         </div><!--/.container-fluid -->
       </nav>
-
+<% if @xmas %>
 <div class="b-page_newyear" style="margin-bottom: -85px;">
 <div class="b-page__content">
     <i class="b-head-decor">
@@ -186,12 +188,14 @@
 
 </div>
 </div>
+<% end %>
 <%= yield %>
 </body>
 <%= javascript_include_tag "application"%>
+<% if @xmas %>
 <%= javascript_include_tag "newyear"%>
   <%= javascript_include_tag "swfobject.min"%>
- 
+ <%end%>
 <%= yield :rejs %>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
