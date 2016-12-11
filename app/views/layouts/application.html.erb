@@ -1,7 +1,6 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 
 <html xmlns="http://www.w3.org/1999/xhtml">
-<% cache("header", :expires_in => 1.week) do %>
 <head runat="server">
 	<title><%= yield :title %> | DeveloperTool</title>
   <meta property="og:title" name="og:title" content=" <%= yield :title %> | DeveloperTool"></meta>
@@ -26,6 +25,7 @@
    <%= yield :recss %>
 </head>
 <body class="container-fluid">
+<% cache("header", :expires_in => 1.week) do %>
 	<span itemscope itemtype="http://schema.org/Article"><nav class="navbar navbar-default">
         <div class="container-fluid">
           <div class="navbar-header">
