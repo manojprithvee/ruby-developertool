@@ -1,7 +1,8 @@
 class ToolsController < ApplicationController
  include ToolsHelper
- expires_in 1.day, public: true, must_revalidate: true
+ 
   def word_count
+  expires_in 1.day, public: true, must_revalidate: true
   end
 
   def differ_text
