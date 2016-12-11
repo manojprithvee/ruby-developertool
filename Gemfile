@@ -4,7 +4,7 @@ source 'https://rubygems.org'
 gem 'rails', '4.0.0'
 gem 'puma'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+
 gem 'faraday'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
@@ -29,6 +29,7 @@ gem 'jbuilder', '~> 1.2'
 gem 'figaro'
 
 group :development do
+  gem 'sqlite3'
   gem 'capistrano'
   gem 'capistrano3-puma'
   gem 'capistrano-rails', require: false
