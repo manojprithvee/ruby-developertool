@@ -44,6 +44,10 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'redis'
+gem 'resque'
+gem 'resque-scheduler'
+gem 'resque-pool'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 

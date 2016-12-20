@@ -15,6 +15,10 @@ Developertool::Application.routes.draw do
   get "ipaddress.html" => "tools#ipaddress"
   get "xpath.html" => "tools#xpath"
   get "sslverify.html" => "tools#sslverify"
+  get "website_notifer.html" => "tools#website_down_notifer"
+  Developertool::Application.routes.draw do
+  mount Resque::Server.new, at: "/resque"
+end
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

@@ -1,0 +1,32 @@
+<h1 itemprop="name" class="center">Web Site DownTime Notifer</h1></span>
+    <%= form_tag("#", method: "get") do %>
+
+  <div class="form-group col-md-5 col-md-offset-1">
+  <%= text_field_tag(:email,nil,{:class => 'form-control col-md-3',:placeholder => "Enter Your Email", :pattern=>"[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"}) %>
+  </div>
+  <div class="form-group col-md-5">
+  <%= text_field_tag(:email,nil,{:class => 'form-control col-md-3',:placeholder => "Enter Website : http://localhost:3000/"}) %>
+  </div>
+  <div class="col-md-2 col-md-offset-5">
+  <div class="form-group col-md-12 col-md-offset-3">
+  <%= submit_tag("Submit",{:class => 'btn btn-primary'}) %>
+  </div>
+          </div>
+<% end %>
+           
+</div>
+
+<% provide :rejs do %>
+<% javascript_include_tag "hash"%>
+<%end%>
+<% provide :title do %>
+Hash Generator
+<%end%>
+<% provide :recss do %>
+<% stylesheet_link_tag "hash"%>
+<%end%>
+<% provide :desc do %>
+Hash Generator is a online tool to produce difference kinds of hash for a string.
+<%end%>
+
+       

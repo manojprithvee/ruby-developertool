@@ -54,4 +54,7 @@ class ToolsController < ApplicationController
   def sslverify
   expires_in 1.day, public: true, must_revalidate: true
   end
+  def website_down_notifer
+  expires_in 1.day, public: true, must_revalidate: true
+  end 
 end
